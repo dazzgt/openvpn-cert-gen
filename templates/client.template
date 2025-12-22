@@ -1,0 +1,27 @@
+client
+dev tun
+proto {proto}
+remote {server} {port}
+remote-cert-tls server
+auth SHA256
+data-ciphers AES-256-GCM
+persist-key
+persist-tun
+nobind
+verb 3
+
+<ca>
+{ca_pem}
+</ca>
+
+<cert>
+{cert_pem}
+</cert>
+
+<key>
+{key_pem}
+</key>
+
+<tls-crypt>
+{tls_crypt_pem}
+</tls-crypt>

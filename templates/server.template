@@ -1,0 +1,36 @@
+port 1194
+proto {proto}
+dev tun0
+local 127.0.0.1
+topology subnet
+server 10.15.0.0 255.255.255.0
+push "redirect-gateway def1"
+push "dhcp-option DNS 8.8.8.8"
+tun-mtu 1400
+mssfix 1320
+keepalive 10 60
+explicit-exit-notify 0
+persist-key
+persist-tun
+duplicate-cn
+verb 3
+
+<ca>
+{ca_pem}
+</ca>
+
+<cert>
+{cert_pem}
+</cert>
+
+<key>
+{key_pem}
+</key>
+
+<dh>
+{dh_pem}
+</dh>
+
+<tls-crypt>
+{tls_crypt_pem}
+</tls-crypt>
