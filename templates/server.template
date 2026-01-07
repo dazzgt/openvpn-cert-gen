@@ -1,11 +1,11 @@
 port 1194
 proto {proto}
 dev tun0
-local 127.0.0.1
 topology subnet
 server 10.15.0.0 255.255.255.0
 push "redirect-gateway def1"
 push "dhcp-option DNS 8.8.8.8"
+push "dhcp-option DNS 1.1.1.1"
 tun-mtu 1400
 mssfix 1320
 keepalive 10 60
@@ -31,6 +31,6 @@ verb 3
 {dh_pem}
 </dh>
 
-<tls-crypt>
+<tls-crypt-v2>
 {tls_crypt_pem}
-</tls-crypt>
+</tls-crypt-v2>

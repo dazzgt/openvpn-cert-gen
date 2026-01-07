@@ -4,6 +4,7 @@ proto {proto}
 remote {server} {port}
 remote-cert-tls server
 auth SHA256
+pull
 data-ciphers AES-256-GCM
 persist-key
 persist-tun
@@ -22,6 +23,6 @@ verb 3
 {key_pem}
 </key>
 
-<tls-crypt>
+<tls-crypt-v2>
 {tls_crypt_pem}
-</tls-crypt>
+</tls-crypt-v2>
