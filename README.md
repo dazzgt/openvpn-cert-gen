@@ -156,7 +156,7 @@ This tool implements OpenVPN's tls-crypt-v2 protocol, which provides:
 
 - The `secrets/` directory contains sensitive cryptographic material. Keep it secure and do not share it.
 - Client configurations are standalone files that can be imported directly into OpenVPN clients.
-- The server configuration expects the TLS-crypt-v2 key to be in the `secrets/` directory.
+- The server configuration expects the tls-crypt-v2 key file (`tls-crypt-v2-server.key`) to be in the `secrets/` directory.
 - Rerunning the generator will reuse existing CA and DH parameters if found, ensuring consistency.
 
 ## License
