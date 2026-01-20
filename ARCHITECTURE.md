@@ -64,7 +64,7 @@ To support future full-service management:
 
 ## 7. Implementation Roadmap
 
-### Phase 1: API &amp; DB
+### Phase 1: API & DB
 - Implement SQLAlchemy models and SQLite initialization.
 - Port `main.py` logic into a `VpnService` class.
 - Create FastAPI endpoints for client listing and ZIP generation.
